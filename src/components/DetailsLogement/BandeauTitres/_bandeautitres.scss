@@ -1,0 +1,55 @@
+.bandeau-titres {
+    width: 1240px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 100px;
+    .logement-title {
+        font-size: 36px;
+        color: $primary;
+        font-weight: 300;
+        margin-bottom: 10px;
+    }
+    .logement-location {
+        font-size: 18px;
+        color: $primary;
+        margin-top: 10px;
+    }
+}
+
+
+
+
+@media screen and (max-width:1220px){
+    .bandeau-titres {
+        width: 70%;
+        .logement-title {
+            width: 70% ;
+            font-size: 30px;
+        }
+    }
+}
+@media screen and (max-width:768px){
+    .bandeau-titres {
+        margin: 0 50px;
+        width: 80%;
+        .logement-title {
+            width: 80% ;
+            font-size: 30px;
+        }
+    }
+}
+@media screen and (max-width:375px) {
+    .bandeau-titres {
+        width: 335px;
+        margin: 0 20px;
+        .logement-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .logement-location {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    }
+}

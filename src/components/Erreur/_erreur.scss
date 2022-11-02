@@ -1,0 +1,77 @@
+
+.erreur {
+    width: 597px;
+    height: 263px;
+    margin: 227px 411px 66px 432px;
+    color: $primary;
+    font-size: 288px;
+    font-weight: 700;
+    text-align: center;
+}
+.inconnu {
+    width: 872px;
+    height: 51px;
+    margin: 0 273px 182px 295px;
+    color: $primary;
+    font-size: 36px;
+    font-weight: 500;
+    text-align: center;
+}
+.lien {
+    width: 284px;
+    height: 26px;
+    color: $primary;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 578px;
+    text-decoration: underline 1px solid;
+    text-align: center;
+    a {
+        text-decoration: none;
+        color: $primary;
+    }
+
+}
+@media screen and (max-width:1440px){
+    .erreur{
+        width: 50vw;
+        height: 25vh;
+        margin: 174px auto 100px auto;
+        font-size: 25vw;
+    }
+    .inconnu {
+        width: 50vw;
+        height: 10vh;
+        font-size: 22px;
+        margin: 0px auto 133px auto;
+    }
+    .lien {
+        width: 50vw;
+        height: 5vh;
+        font-size: 16px;
+        margin: 0 auto;
+    }
+}
+
+
+@media screen and (max-width:375px) {
+    .erreur{
+        width: 198px;
+        height: 99px;
+        font-size: 96px;
+        margin: 262px 89px 11px 88px;
+    }
+    .inconnu {
+        width: 262px;
+        height: 52px;
+        font-size: 18px;
+        margin: 0px 58px 133px 57px;
+        text-align: center;
+    }
+    .lien {
+        width: 221px;
+        height: 20px;
+        font-size: 14px;
+        margin: 0 78px 0 76px;
+    }
+}

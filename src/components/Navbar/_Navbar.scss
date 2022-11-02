@@ -1,0 +1,90 @@
+.NavbarItems {
+    display: flex;
+    flex-direction: row;
+    max-width: 1240px;
+    height: 68px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 100px 63px 100px;
+}
+.NavbarFixed {
+    max-width: 1440px;
+    height: 171px;
+    padding: 1px ;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: #fff;
+}
+
+.nav-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    width: 309px;
+    height: 34px;
+    font-weight: 500;
+    font-size: 24px;
+    font-weight: lighter;
+    text-align: end;
+    .nav-links {
+        text-decoration: none;
+        color: $primary;
+    }
+    .actif {
+        text-decoration: underline;
+    }
+} 
+
+@media screen and (max-width:768px) {
+    .NavbarItems {
+        max-width: 740px;
+        height: 58px;
+        margin: 30px;
+    }
+    .nav-items {
+        width: 210px;
+        height: 22px;
+        font-size: 16px;
+        align-items: end;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .nav-logo {
+        width: 175px;
+        height: 53px;
+    }
+    .NavbarFixed {
+        height: 151px;
+
+    }
+    
+    
+}
+
+@media screen and (max-width:375px) {
+    .NavbarItems {
+        max-width: 335px;
+        height: 47px;
+        margin: 20px;
+    }
+    .nav-items {
+        width: 140px;
+        height: 17px;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+    .nav-logo {
+        width: 145px;
+        height: 47px;
+    }
+    .NavbarFixed {
+        height: 94px;
+
+    }
+    
+}
+
+
+
+

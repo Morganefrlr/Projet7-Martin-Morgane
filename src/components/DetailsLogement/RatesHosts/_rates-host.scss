@@ -1,0 +1,100 @@
+.stars {
+    width: 196px;
+    height: 31px;
+    margin-top: 10px;
+    color: $secondary;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    .star {
+        font-size: 30px;
+    }
+    .star.active {
+        color: $primary;
+    }
+}
+
+.host {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .host-name {
+        font-size: 18px;
+        color: $primary;
+        width: 93px;
+        height: 52px;
+        text-align: end;
+        margin-right: 10px;
+        
+    }
+    .host-picture {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+    }
+}
+
+.host-rates {
+    display: flex;
+    flex-direction: column;
+    width: 1240px;
+    height: auto;
+    margin: 0 100px;
+    align-items: flex-end;
+    position: absolute;
+    top: 620px;
+
+}
+
+
+
+@media screen and (max-width:1440px){
+    .host-rates{
+        width: 80%;
+        margin: 0 10%;
+    }
+
+}
+@media screen and (max-width:768px){
+    .host-rates {
+        flex-direction: row-reverse;
+        position: static;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin: 10px 5% 0 5%;
+    
+    }
+}
+@media screen and (max-width:375px){
+    .stars {
+        width: 98px;
+        height: 18px;
+        top: 450px;
+        left: 15px;
+        margin: 10px 0;
+        .star {
+            font-size: 15px;
+        }
+        
+    }
+    .host {
+        right: 20px;
+        top: 468px;
+        .host-name {
+            font-size: 12px;
+            color: $primary;
+            width: 93px;
+            height: auto;
+        }
+        .host-picture {
+            width: 32px;
+            height: 32px;
+        }
+    }
+    .host-rates {
+        width: 335px;
+        margin: 10px 20px;    
+    }
+}
+

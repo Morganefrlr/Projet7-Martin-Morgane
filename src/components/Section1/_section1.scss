@@ -1,0 +1,97 @@
+@mixin dimensionSec1{
+    width: 1240px;
+    height: 223px;
+    margin: 0 100px;
+    border-radius: 25px;
+}
+@mixin backSec1 {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.section1 {
+    position: relative;
+    @include dimensionSec1;
+    justify-content: center;
+    border-radius: 25px;
+    background-color: #000000;
+    mix-blend-mode: darken;
+    opacity: 0.3;
+}
+.sec1-divback {
+    position: absolute;
+    @include dimensionSec1;
+    top: 171px;
+}
+.home{
+    background-image: url(../../images/Section1Home.png);   
+    @include backSec1;
+}
+.propos {
+    background-image: url(../../images/Section1Apropos.png);
+    @include backSec1;
+}
+
+
+
+.home-title {
+    position: absolute;
+    left: 373px;
+    top: 249px;
+    width: 705px;
+    height: 68px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 48px;
+    color: #fff;
+}
+
+
+@media screen and (max-width:1440px) {
+    .section1, .sec1-divback{
+        width: 90%;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+    .home-title {
+        width: auto;
+        height: auto;
+        left: 242px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    
+    .sec1-divback {
+        top: 150px;
+    }  
+    .home-title {
+        left: 76px;
+        top: 240px;
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .section1, .sec1-divback{
+        width: 335px;
+        height: 111px;
+        margin: 0 20px;
+        border-radius: 10px;
+    }
+    .sec1-divback {
+        top: 94px;
+        border-radius: 10px;
+    }  
+    .home-title {
+        width: 217px;
+        height: 48px;
+        top: 114px;
+        left: 36px;
+        font-size: 24px;
+    }
+}

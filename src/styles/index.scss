@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:'Montserrat', sans-serif ;
+}
+
+
+$primary: #FF6060;
+$secondary: #F6F6F6;
+
+@import '../components/Navbar/Navbar';
+@import '../components/Section1/section1';
+@import '../components/Collapse/collapse';
+@import '../components/Erreur/erreur';
+@import '../components/Listelogements/listelogements';
+@import '../components/Slider/sliderImages';
+@import '../components/DetailsLogement/BandeauTitres/bandeautitres';
+@import '../components/DetailsLogement/Tags/tags';
+@import '../components/DetailsLogement/RatesHosts/rates-host';
+@import '../components/Footer/footer';
+
+

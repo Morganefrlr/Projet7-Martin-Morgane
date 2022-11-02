@@ -1,0 +1,92 @@
+@mixin dimensionCard {
+    width: 340px;
+    height: 340px;
+    border-radius: 10px;
+}
+
+
+.fond{
+    width: 1240px;
+    background-color: $secondary;
+    height: auto;
+    margin: 43px 100px;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    grid-row-gap: 40px;
+    grid-column-gap: 50px;
+    padding: 60px 50px;
+
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    @include dimensionCard;
+}
+.imglog {
+    @include dimensionCard;
+    position:absolute ;
+}
+.titrelog{
+    position: relative;
+    @include dimensionCard;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    color:white;
+    padding:277px 20px 0 20px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+@media screen and (max-width:1440px){
+    .fond{
+        width: 90%;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        grid-column-gap: 2vw;
+    }
+}
+@media screen and (max-width:1240px){
+    .fond {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 4vw 15vw;
+    }
+}
+@media screen and (max-width:768px){
+    .fond {
+        background-color: #fff;
+        width: 100%;
+        margin: 0;
+        padding: 20px 0 0 0;
+        grid-row-gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .card, .titrelog {
+        width: 90%;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+    .imglog{
+        width: 81%;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+}
+
+
+@media screen and (max-width:375px) {
+    .fond {
+        padding: 20px;
+    }
+    .titrelog {
+        padding: 195px 20px 0 20px;
+    }
+    .imglog, .titrelog, .card {
+        width: 335px;
+        height: 255px;
+        margin: auto;
+    }
+    
+
+}
