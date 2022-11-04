@@ -32,8 +32,7 @@ const Logement = () => {
     },[id]); 
     
 
-
-
+    
     const rates = `${dataApi.rating}`
     const collapseDescription =[
         {
@@ -41,12 +40,15 @@ const Logement = () => {
             response: `${dataApi.description}`
         }
     ]
+    const tab = dataApi.equipments
+
     const collapseEquipement =[
         {
             title: 'Equipement',
-            response:[`${dataApi.equipments}`]
+            response:tab
         }
     ]
+    
     const infoTitre = [
         {
             title: `${dataApi.title}`,
@@ -71,7 +73,6 @@ const Logement = () => {
                 <Host id={id} />
                 <Rates rate={rates} />
             </div>
-
             <div className='collapse-logement'>
                 <Collapse data={collapseDescription} />
                 <Collapse data={collapseEquipement} />

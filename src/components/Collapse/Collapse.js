@@ -19,6 +19,7 @@ const Collapse = (data) => {
         }
         setClicked(index)
     }; 
+   
 
     return (
         
@@ -30,7 +31,7 @@ const Collapse = (data) => {
                                 <p>{item.title}</p>
                                 <span>{clicked === index ? <FontAwesomeIcon icon={faChevronUp}></FontAwesomeIcon> : <FontAwesomeIcon icon={faChevronDown}></FontAwesomeIcon> }</span>
                             </div>
-                            <div className={clicked === index ? 'collapse-reponse show' : 'collapse-reponse'}>
+                            <div className={clicked === index ? 'collapse-reponse show' : 'collapse-reponse'}>                                
                                 <p>{item.response}</p>
                             </div>
                         </div>  

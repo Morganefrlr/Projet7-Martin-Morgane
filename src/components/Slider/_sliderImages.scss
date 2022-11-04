@@ -34,7 +34,7 @@
     .nbr-image {
         position: absolute;
         z-index: 10;
-        left: 607px;
+        left: 40vw;
         bottom: 25px;
         color: #fff;
     }
@@ -87,6 +87,9 @@
             top: 118px;
             left: 6px;
             font-size: 20px;
+        }
+        .nbr-image {
+            display: none;
         }
         
     }
