@@ -4,6 +4,19 @@
     padding: 0;
     font-family:'Montserrat', sans-serif ;
 }
+html {
+    
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width:1440px) {
+    html {
+        display: inherit;
+    }
+}
+
+
 
 
 $primary: #FF6060;

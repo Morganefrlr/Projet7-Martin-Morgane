@@ -8,8 +8,8 @@ import axios from 'axios'
 
 
 
-const SliderImages = ({id}) => {
 
+const SliderImages = ({id, pictures}) => {
 
 
     const [images, setImages]= useState([])
@@ -20,6 +20,8 @@ const SliderImages = ({id}) => {
     },[id]);
 
 
+
+   
 
 
     const [current, setCurrent] = useState(0)
@@ -43,7 +45,7 @@ const SliderImages = ({id}) => {
         <section className='slider'>
            <FontAwesomeIcon icon={faChevronLeft} className={length === 1 ? 'fleche-gauche inactive' : 'fleche-gauche'} onClick={prevSLide}></FontAwesomeIcon>
            <FontAwesomeIcon icon={faChevronRight} className={length === 1 ? 'fleche-droite inactive' : 'fleche-droite'} onClick={nextSLide}></FontAwesomeIcon>  
-          {images.map((slide,index) => {
+          {pictures && pictures.map((slide,index) => {
             return (
                 <div className={index === current ? 'slide active' : 'slide'} key={index}>
                     <p className='nbr-image'>{current +1}/{length}</p>
