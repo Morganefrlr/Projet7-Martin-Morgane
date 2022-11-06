@@ -1,7 +1,6 @@
 import React from 'react';
 import {  useParams } from 'react-router-dom';
-import {useEffect, useState} from 'react'
-import axios from 'axios'
+import logement from '../data/logements.json'
 
 
 import Navbar from '../components/Navbar/Navbar'
@@ -20,57 +19,55 @@ import Host from '../components/DetailsLogement/RatesHosts/Host';
 
 
 const Logement = () => {
-
+    
+    
     const params = useParams();
     const id = params.id
-    const [dataApi, setDataApi] = useState([]);
+    
+    const appartList = logement.logement
+    const appart = appartList.filter(el => el.id === id)
 
-    useEffect(() => {
-        axios
-        .get(`http://localhost:8000/logement?id=${id}`)
-        .then((res) => setDataApi(res.data[0]))   
-    },[id]); 
     
    
+    
     const collapseDescription =[
-        {
-            title: 'Description',
-            response: `${dataApi.description}`
-        }
-    ]
-
+            {
+                title: 'Description',
+                response: `${appart[0].description}`
+            }
+        ]
     const collapseEquipement =[
         {
             title: 'Equipement',
-            response:dataApi.equipments
+            response:appart[0].equipments
            
         }
     ]
-   
-    
-    const infoTitre = [
+    const infoTitre = 
         {
-            title: `${dataApi.title}`,
-            location: `${dataApi.location}`,
+            title: `${appart[0].title}`,
+            location: `${appart[0].location}`,
         }
-    ]
+    
+    
+   
     
 
     return (
         <div>
             <Navbar />
 
-            <SliderImages id={id} pictures={dataApi.pictures}/>
+            <SliderImages pictures={appart[0].pictures}/>
 
             <div className='bandeau-titres'>
                <BandeauTitres infos={infoTitre} /> 
             </div>
 
-            <Tags tagsTab={dataApi.tags} />
+            <Tags tagsTab={appart[0].tags} />
 
             <div className='host-rates'>
-                <Host hostTab={dataApi.host} />
-                <Rates rate={dataApi.rating} />
+                <Host hostTab={appart[0].host} />
+                <Rates rate={appart[0].rating} />
             </div>
             <div className='collapse-logement'>
                 <Collapse data={collapseDescription} />

@@ -11,7 +11,7 @@ const Tags = ({tagsTab}) => {
     return (
         <div className='tags'>
             
-                {tagsTab && tagsTab.map((tag,index) => {
+                {tagsTab.map((tag,index) => {
                     return (
                         <div className="tag" key={index}>{tag}</div>
                     )

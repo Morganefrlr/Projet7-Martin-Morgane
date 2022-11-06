@@ -1,7 +1,6 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons'
-import axios from 'axios'
 
 
 
@@ -9,23 +8,12 @@ import axios from 'axios'
 
 
 
-const SliderImages = ({id, pictures}) => {
 
-
-    const [images, setImages]= useState([])
-    useEffect(() => {
-        axios
-        .get(`http://localhost:8000/logement?id=${id}`)
-        .then((res) => setImages(res.data[0].pictures))   
-    },[id]);
-
-
-
-   
+const SliderImages = ({pictures}) => {
 
 
     const [current, setCurrent] = useState(0)
-    const length = images.length
+    const length = pictures.length
 
     const nextSLide = () => {
         setCurrent(current === length -1 ? 0 : current +1)
