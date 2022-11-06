@@ -31,23 +31,22 @@ const Logement = () => {
         .then((res) => setDataApi(res.data[0]))   
     },[id]); 
     
-    console.log(dataApi.tags)
-    
-    const rates = `${dataApi.rating}`
+   
     const collapseDescription =[
         {
             title: 'Description',
             response: `${dataApi.description}`
         }
     ]
-    const tab = dataApi.equipments
 
     const collapseEquipement =[
         {
             title: 'Equipement',
-            response:tab
+            response:dataApi.equipments
+           
         }
     ]
+   
     
     const infoTitre = [
         {
@@ -71,7 +70,7 @@ const Logement = () => {
 
             <div className='host-rates'>
                 <Host hostTab={dataApi.host} />
-                <Rates rate={rates} />
+                <Rates rate={dataApi.rating} />
             </div>
             <div className='collapse-logement'>
                 <Collapse data={collapseDescription} />
