@@ -33,7 +33,7 @@ const SliderImages = ({pictures}) => {
         <section className='slider'>
            <FontAwesomeIcon icon={faChevronLeft} className={length === 1 ? 'fleche-gauche inactive' : 'fleche-gauche'} onClick={prevSLide}></FontAwesomeIcon>
            <FontAwesomeIcon icon={faChevronRight} className={length === 1 ? 'fleche-droite inactive' : 'fleche-droite'} onClick={nextSLide}></FontAwesomeIcon>  
-          {pictures && pictures.map((slide,index) => {
+          {pictures.map((slide,index) => {
             return (
                 <div className={index === current ? 'slide active' : 'slide'} key={index}>
                     <p className='nbr-image'>{current +1}/{length}</p>

@@ -8,8 +8,8 @@ import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 
 
-const Collapse = (data) => {
-    const Data = data.data
+const Collapse = ({data}) => {
+    
 
     const [clicked, setClicked] = useState(false);
 
@@ -19,12 +19,12 @@ const Collapse = (data) => {
         }
         setClicked(index)
     }; 
-   
+
 
     return (
         
             <>
-                {Data.map((item, index) => {
+                {data.map((item, index) => {
                     return (
                         <div key={index}>
                             <div className="collapse-titre" onClick={() => toogle(index)} key={index}>

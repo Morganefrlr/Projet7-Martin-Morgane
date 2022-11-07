@@ -1,6 +1,6 @@
 import React from 'react';
 import Collapse from '../components/Collapse/Collapse';
-import Navbar from '../components/Navbar/Navbar'
+import NavBar from '../components/Navbar/NavBar'
 import Section1 from '../components/Section1/Section1'
 import {Data} from '../components/Collapse/data';
 import Footer from '../components/Footer/Footer';
@@ -8,7 +8,7 @@ import Footer from '../components/Footer/Footer';
 const Apropos = () => {
     return (
         <div>
-            <Navbar/>
+            <NavBar />
             <div className='sec1-divback propos'></div>
             <Section1 />
             <div className='collapse-apropos'>

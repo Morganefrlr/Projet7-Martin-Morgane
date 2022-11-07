@@ -3,8 +3,8 @@ import {  useParams } from 'react-router-dom';
 import logement from '../data/logements.json'
 
 
-import Navbar from '../components/Navbar/Navbar'
-import SliderImages from '../components/Slider/SliderImages';
+import NavBar from '../components/Navbar/NavBar'
+import SliderImages from '../components/DetailsLogement/Slider/SliderImages';
 import Tags from '../components/DetailsLogement/Tags/Tags';
 import BandeauTitres from '../components/DetailsLogement/BandeauTitres/BandeauTitres';
 import Rates from '../components/DetailsLogement/RatesHosts/Rates';
@@ -55,7 +55,7 @@ const Logement = () => {
 
     return (
         <div>
-            <Navbar />
+            <NavBar />
 
             <SliderImages pictures={appart[0].pictures}/>
 
