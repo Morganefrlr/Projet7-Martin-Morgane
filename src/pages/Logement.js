@@ -27,7 +27,7 @@ const Logement = () => {
     const appartList = logement.logement
     const appart = appartList.filter(el => el.id === id)
 
-    
+   
    
     
     const collapseDescription =[

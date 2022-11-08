@@ -19,7 +19,28 @@ const Collapse = ({data}) => {
         }
         setClicked(index)
     }; 
-
+   
+    const reponse = () => {
+        if (typeof data[0].response == 'object'){           
+            return (
+                <ul>
+                {data[0].response.map((resp, index) => {
+                    return (
+                        <li key={index}>{resp}</li>
+                    )
+                })}
+                </ul>
+            )
+        } else {
+            return (
+                <p>{data[0].response}</p>
+            )
+        }
+    }
+            
+    
+   
+    
 
     return (
         
@@ -31,8 +52,8 @@ const Collapse = ({data}) => {
                                 <p>{item.title}</p>
                                 <span>{clicked === index ? <FontAwesomeIcon icon={faChevronUp}></FontAwesomeIcon> : <FontAwesomeIcon icon={faChevronDown}></FontAwesomeIcon> }</span>
                             </div>
-                            <div className={clicked === index ? 'collapse-reponse show' : 'collapse-reponse'}>                                
-                                <p>{item.response}</p>
+                            <div className={clicked === index ? 'collapse-reponse show' : 'collapse-reponse'}>      
+                                {reponse()}
                             </div>
                         </div>  
                     )

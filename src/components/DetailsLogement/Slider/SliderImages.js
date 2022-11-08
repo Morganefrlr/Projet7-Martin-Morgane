@@ -11,7 +11,7 @@ import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons
 
 const SliderImages = ({pictures}) => {
 
-
+    
     const [current, setCurrent] = useState(0)
     const length = pictures.length
 

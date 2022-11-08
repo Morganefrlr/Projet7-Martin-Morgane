@@ -65,7 +65,13 @@
         padding-top: 15px;
     }
     .collapse-reponse{
-        
+        ul {
+            margin: 36px 27px 19px 18px;
+            list-style: none;
+        }
+        li{
+            margin: 7px;
+        }
     }
 
 }
