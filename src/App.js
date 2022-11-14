@@ -1,4 +1,4 @@
-import Router from './components/Routes'
+import Router from './routes/Routes'
 import './styles/index.scss'
 
 
