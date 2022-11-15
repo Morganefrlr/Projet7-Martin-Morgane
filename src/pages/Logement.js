@@ -3,7 +3,7 @@ import {  useParams } from 'react-router-dom';
 import logement from '../data/logements.json'
 
 
-import NavBar from '../components/Navbar/NavBar'
+import Navbar from '../components/Navbar/Navbar'
 import SliderImages from '../components/DetailsLogement/Slider/SliderImages';
 import Tags from '../components/DetailsLogement/Tags/Tags';
 import BandeauTitres from '../components/DetailsLogement/BandeauTitres/BandeauTitres';
@@ -80,7 +80,7 @@ const Logement = () => {
 
     return (
         <div>
-            <NavBar />
+            <Navbar />
 
             {appart[0] && 
              <><SliderImages pictures={appart[0].pictures}/>

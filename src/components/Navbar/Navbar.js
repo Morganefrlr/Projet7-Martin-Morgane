@@ -3,7 +3,7 @@ import srcLogo from '../../images/LOGONAV.svg'
 
 import { NavLink } from "react-router-dom"
 
-const NavBar = () => {
+const Navbar = () => {
     return (
         <div className='NavbarFixed'>
         <nav className="NavbarItems">
@@ -17,4 +17,4 @@ const NavBar = () => {
     );
 };
 
-export default NavBar;
+export default Navbar;
