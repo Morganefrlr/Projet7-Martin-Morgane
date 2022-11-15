@@ -11,6 +11,7 @@ import Rates from '../components/DetailsLogement/RatesHosts/Rates';
 import Collapse from '../components/Collapse/Collapse'
 import Footer from '../components/Footer/Footer';
 import Host from '../components/DetailsLogement/RatesHosts/Host';
+import Erreur404 from '../components/Erreur/Erreur404'
 
 
 
@@ -25,29 +26,53 @@ const Logement = () => {
     const id = params.id
     
     const appartList = logement.logement
-    const appart = appartList.filter(el => el.id === id)
 
-   
+    let appart =[]
+    let collapseDescription = []
+    let collapseEquipement = []
+    let infoTitre = {}
+    
+
+
+    const appartement = () => {
+        for(let i=0; i<appartList.length; i++){
+            if(id === appartList[i].id){
+                
+                appart = appartList.filter(el => el.id === id)
+                collapseDescription =[
+                    {
+                        title: 'Description',
+                        response: `${appart[0].description}`
+                    }
+                ]
+                collapseEquipement =[
+                {
+                    title: 'Equipement',
+                    response:appart[0].equipments
+                   
+                }
+                ]
+                infoTitre = 
+                {
+                    title: `${appart[0].title}`,
+                    location: `${appart[0].location}`,
+                }
+                
+                
+            }
+            
+        }
+       
+
+    }
+   appartement();
    
     
-    const collapseDescription =[
-            {
-                title: 'Description',
-                response: `${appart[0].description}`
-            }
-        ]
-    const collapseEquipement =[
-        {
-            title: 'Equipement',
-            response:appart[0].equipments
-           
-        }
-    ]
-    const infoTitre = 
-        {
-            title: `${appart[0].title}`,
-            location: `${appart[0].location}`,
-        }
+    //const appart = appartList.filter(el => el.id === id)
+
+    
+    
+    
     
     
    
@@ -57,22 +82,31 @@ const Logement = () => {
         <div>
             <NavBar />
 
-            <SliderImages pictures={appart[0].pictures}/>
+            {appart[0] && 
+             <><SliderImages pictures={appart[0].pictures}/>
 
-            <div className='bandeau-titres'>
-               <BandeauTitres infos={infoTitre} /> 
-            </div>
-
-            <Tags tagsTab={appart[0].tags} />
-
-            <div className='host-rates'>
-                <Host hostTab={appart[0].host} />
-                <Rates rate={appart[0].rating} />
-            </div>
-            <div className='collapse-logement'>
-                <Collapse data={collapseDescription} />
-                <Collapse data={collapseEquipement} />
-            </div>
+             <div className='bandeau-titres'>
+                <BandeauTitres infos={infoTitre} /> 
+             </div>
+ 
+             <Tags tagsTab={appart[0].tags} />
+ 
+             <div className='host-rates'>
+                 <Host hostTab={appart[0].host} />
+                 <Rates rate={appart[0].rating} />
+             </div>
+             <div className='collapse-logement'>
+                 <Collapse data={collapseDescription} />
+                 <Collapse data={collapseEquipement} />
+             </div></>
+             
+            }
+            {!appart[0] &&
+                 <Erreur404 />
+            }
+            
+            
+            
             
             <Footer />
            
